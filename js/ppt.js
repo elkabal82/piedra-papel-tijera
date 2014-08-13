@@ -1,11 +1,17 @@
 //Codigo para el juego de piedra papel o tijereas
+function aleatorio(minimo, maximo)
+{
+	var numero = Math.floor(Math.random() * (maximo - minimo +1) + minimo);
+	return numero;
+}
+
 //declaramos las variables 
 var piedra = 0;
 var papel = 1;
 var tijera = 2;
 var opciones = ["piedra", "papel", "tijeras"];
 var opcionUsuario;
-var opcionMaquina = piedra;
+var opcionMaquina = aleatorio(0,2);
 //depues del prompt no se deja ESPACIO ente el prompt y el parentesis
 //y despues del \n no dejar espacio
 //Guardamos en opcionUsuario, lo que el usuario elijio
