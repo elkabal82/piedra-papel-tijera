@@ -16,22 +16,24 @@ var opcionMaquina = aleatorio(0,2);
 //y despues del \n no dejar espacio
 //Guardamos en opcionUsuario, lo que el usuario elijio
 opcionUsuario = prompt("¿Que eliges?\nPiedra: 0\nPapel: 1\nTijera: 2", 0);
-alert("Elegiste " + opciones[opcionUsuario]);
-alert("JavaScript eligio " + opciones[opcionMaquina] )
+//alert("Elegiste " + opciones[opcionUsuario]);
+htmlOpcionUsuario.innerHTML = opciones[opcionUsuario];
+//alert("JavaScript eligio " + opciones[opcionMaquina] )
+htmlOpcionMaquina.innerHTML = opciones[opcionMaquina];
 //si el usuario elije piedra, entra aquí
 if (opcionUsuario == piedra)
 {
 	if (opcionMaquina == piedra)
 	{
-		alert("Empate");
+		htmlResultado.innerHTML = ("Empate");
 	}
 	else if (opcionMaquina == papel)
 	{
-		alert("Perdiste");
+		htmlResultado.innerHTML = ("Perdiste");
 	}
 	else if (opcionMaquina == tijera)
 	{
-		alert("Ganaste");
+		htmlResultado.innerHTML = ("Ganaste");
 	}
 }
 //si el usuario elije papel entra aquí
