@@ -1,4 +1,5 @@
 //Codigo para el juego de piedra papel o tijereas
+function inicio (){
 function aleatorio(minimo, maximo)
 {
 	var numero = Math.floor(Math.random() * (maximo - minimo +1) + minimo);
@@ -72,4 +73,5 @@ else if (opcionUsuario == tijera)
 else
 {
 	alert("Esa opcion no existe");
+}
 }
